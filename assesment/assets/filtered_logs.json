@@ -1,0 +1,16 @@
+{
+    "actions": [
+        {
+            "COMMAND": null,
+            "RESPONSE": null
+        },
+        {
+            "COMMAND": "[1788100572.324][INFO]: [f221e95800f28d749b7894e09769e4e3] COMMAND InitSession {\n   \"capabilities\": {\n      \"firstMatch\": [ {\n         \"browserName\": \"chrome\",\n         \"goog:chromeOptions\": {\n            \"args\": [ \"--remote-allow-origins=*\" ],\n            \"binary\": \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\",\n            \"extensions\": [  ]\n         },\n         \"goog:loggingPrefs\": {\n            \"browser\": \"ALL\",\n            \"driver\": \"ALL\"\n         }\n      } ]\n   }\n}\n",
+            "RESPONSE": "[1788100576.554][INFO]: [f221e95800f28d749b7894e09769e4e3] RESPONSE InitSession {\n   \"capabilities\": {\n      \"acceptInsecureCerts\": false,\n      \"browserName\": \"chrome\",\n      \"browserVersion\": \"151.0.7922.174\",\n      \"chrome\": {\n         \"chromedriverVersion\": \"151.0.7922.138 (41fa82442390a4d4456c78f2d69a832d5720cb27-refs/branch-heads/7922@{#2891})\",\n         \"userDataDir\": \"C:\\\\Users\\\\SAPTAR~1\\\\AppData\\\\Local\\\\Temp\\\\scoped_dir31640_658557250\"\n      },\n      \"fedcm:accounts\": true,\n      \"goog:chromeOptions\": {\n         \"debuggerAddress\": \"localhost:49989\"\n      },\n      \"goog:processID\": 30852,\n      \"networkConnectionEnabled\": false,\n      \"pageLoadStrategy\": \"normal\",\n      \"platformName\": \"windows\",\n      \"proxy\": {\n      },\n      \"setWindowRect\": true,\n      \"strictFileInteractability\": false,\n      \"timeouts\": {\n         \"implicit\": 0,\n         \"pageLoad\": 300000,\n         \"script\": 30000\n      },\n      \"unhandledPromptBehavior\": \"dismiss and notify\",\n      \"webauthn:extension:credBlob\": true,\n      \"webauthn:extension:largeBlob\": true,\n      \"webauthn:extension:minPinLength\": true,\n      \"webauthn:extension:prf\": true,\n      \"~~~\": \"...\"\n   },\n   \"sessionId\": \"f221e95800f28d749b7894e09769e4e3\"\n}\n"
+        },
+        {
+            "COMMAND": "[1788100579.915][INFO]: [f221e95800f28d749b7894e09769e4e3] COMMAND MaximizeWindow {\n}\n",
+            "RESPONSE": "[1788100580.036][INFO]: [f221e95800f28d749b7894e09769e4e3] RESPONSE MaximizeWindow {\n   \"height\": 832,\n   \"width\": 1552,\n   \"x\": -7,\n   \"y\": -7\n}\n"
+        }
+    ]
+}

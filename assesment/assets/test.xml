@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.45">
+<file name="C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java">
+<error line="18" severity="error" message="USED_COMMENT" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
+<error line="38" severity="error" message="USED_COMMENT" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
+<error line="39" severity="error" message="USED_COMMENT" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
+</file>
+<file name="C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java">
+</file>
+</checkstyle>
