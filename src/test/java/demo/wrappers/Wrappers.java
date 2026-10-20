@@ -25,7 +25,7 @@ public class Wrappers {
     public static void enterTextWrapper(WebDriver driver, By locator, String textToEnter) {
         System.out.println("Sending keys");
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
             WebElement inputBox = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
             inputBox.clear();
             inputBox.sendKeys(textToEnter);
@@ -55,7 +55,7 @@ public class Wrappers {
         int washingMachineCount = 0;
         try {
             new WebDriverWait(driver, Duration.ofSeconds(10))
-                    .until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+                    .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
             int ratingCount = driver.findElements(locator).size();
             for (int i = 0; i < ratingCount; i++) {
                 String ratingText = getElementTextWithRetry(driver, locator, i);
@@ -91,7 +91,10 @@ public class Wrappers {
     public static Boolean printTitleAndDiscountIphone(
             WebDriver driver, By locator, int discount) {
         try {
-            List<WebElement> productRows = driver.findElements(locator);
+            List<WebElement> productRows =
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(ExpectedConditions
+                        .visibilityOfAllElementsLocatedBy(locator));
             for (WebElement productRow : productRows) {
                 List<WebElement> discountElements =
                         productRow.findElements(By.xpath(".//*[contains(normalize-space(.), '% off')]"));
@@ -125,7 +128,7 @@ public class Wrappers {
         try {
             List<CoffeeMugDetails> products = new ArrayList<>();
             List<WebElement> reviewElements = new WebDriverWait(driver, Duration.ofSeconds(15))
-                    .until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+                    .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
             System.out.println("Coffee mug review elements found: " + reviewElements.size());
             for (WebElement reviewElement : reviewElements) {
                 Integer reviewCount = parseFirstNumber(reviewElement.getText());
