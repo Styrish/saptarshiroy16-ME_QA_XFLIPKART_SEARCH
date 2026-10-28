@@ -54,7 +54,8 @@ public class Wrappers {
             WebDriver driver, By locator, double starRating) {
         int washingMachineCount = 0;
         try {
-            new WebDriverWait(driver, Duration.ofSeconds(10))
+            new WebDriverWait(driver, Duration.ofSeconds(30))
+                    .ignoring(StaleElementReferenceException.class)
                     .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
             int ratingCount = driver.findElements(locator).size();
             for (int i = 0; i < ratingCount; i++) {
@@ -89,45 +90,83 @@ public class Wrappers {
     }
 
     public static Boolean printTitleAndDiscountIphone(
-            WebDriver driver, By locator, int discount) {
-        try {
-            List<WebElement> productRows =
-        new WebDriverWait(driver, Duration.ofSeconds(30))
-                .until(ExpectedConditions
-                        .visibilityOfAllElementsLocatedBy(locator));
-            for (WebElement productRow : productRows) {
-                List<WebElement> discountElements =
-                        productRow.findElements(By.xpath(".//*[contains(normalize-space(.), '% off')]"));
-                List<WebElement> titleElements =
-                        productRow.findElements(By.xpath(".//*[contains(@class, 'KzDlHZ')]"));
+        WebDriver driver, By locator, int discount) {
 
-                if (discountElements.isEmpty() || titleElements.isEmpty()) {
+    return new WebDriverWait(driver, Duration.ofSeconds(30))
+        .ignoring(StaleElementReferenceException.class)
+        .until(webDriver -> {
+            List<WebElement> cards = webDriver.findElements(locator);
+            List<String> matchingProducts = new ArrayList<>();
+            int discountsRead = 0;
+
+            for (WebElement card : cards) {
+                List<WebElement> titles = card.findElements(
+                    By.cssSelector("div.RG5Slk")
+                );
+                List<WebElement> discounts = card.findElements(
+                    By.xpath(".//span[contains(normalize-space(.), '% off')]")
+                );
+
+                if (titles.isEmpty() || discounts.isEmpty()) {
                     continue;
                 }
 
-                String discountText = discountElements.get(0).getText();
-                Matcher discountMatcher = Pattern.compile("(\\d+)\\s*%").matcher(discountText);
-                if (discountMatcher.find()
-                        && Integer.parseInt(discountMatcher.group(1)) >= discount) {
-                    System.out.println("iPhone title: " + titleElements.get(0).getText()
-                            + " and discount: " + discountText);
+                WebElement titleElement = titles.get(0);
+                WebElement discountElement = discounts.get(0);
+
+                if (!titleElement.isDisplayed()
+                        || !discountElement.isDisplayed()) {
+                    continue;
+                }
+
+                // Read the displayed title and discount.
+                String title = titleElement.getText();
+                String discountText = discountElement.getText();
+
+                Matcher matcher = Pattern.compile("(\\d+)\\s*%")
+                    .matcher(discountText);
+
+                if (!matcher.find()) {
+                    continue;
+                }
+
+                discountsRead++;
+
+                // Keep products meeting the discount threshold.
+                if (Integer.parseInt(matcher.group(1)) >= discount) {
+                    matchingProducts.add(
+                        "iPhone title: " + title
+                            + " and discount: " + discountText
+                    );
                 }
             }
-            return true;
-        } catch (Exception e) {
-            System.out.println("Exception Occured! " + e.getMessage());
-            return false;
-        }
-    }
 
-    public static Boolean printTitleAndDiscountIphone(WebDriver driver, By locator) {
-        return printTitleAndDiscountIphone(driver, locator, DEFAULT_IPHONE_DISCOUNT);
-    }
+            // Retry if product discount data is not ready.
+            if (discountsRead == 0) {
+                return null;
+            }
+
+            matchingProducts.forEach(System.out::println);
+            System.out.println(
+                "Products with at least " + discount
+                    + "% discount: " + matchingProducts.size()
+            );
+            return true;
+        });
+}
+
+public static Boolean printTitleAndDiscountIphone(
+        WebDriver driver, By locator) {
+    return printTitleAndDiscountIphone(
+        driver, locator, DEFAULT_IPHONE_DISCOUNT
+    );
+}
 
     public static Boolean printTitleAndImageUrlOfCoffeeMug(WebDriver driver, By locator) {
         try {
             List<CoffeeMugDetails> products = new ArrayList<>();
-            List<WebElement> reviewElements = new WebDriverWait(driver, Duration.ofSeconds(15))
+            List<WebElement> reviewElements = new WebDriverWait(driver, Duration.ofSeconds(30))
+                    .ignoring(StaleElementReferenceException.class)
                     .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
             System.out.println("Coffee mug review elements found: " + reviewElements.size());
             for (WebElement reviewElement : reviewElements) {

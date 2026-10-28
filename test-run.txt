@@ -1,0 +1,137 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+Gradle Test Executor 21 STANDARD_OUT
+    [TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
+
+Test Suite for Buildout > Test Cases for Buildout STANDARD_ERROR
+    Oct 28, 2026 10:03:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    WARNING: Unable to find CDP implementation matching 156
+    Oct 28, 2026 10:03:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+    WARNING: Unable to find version of CDP to use for 156.0.8078.49. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase01 STANDARD_OUT
+    Beginning Test Case 01
+    Sending keys
+    Clicking
+    Exception Occured! Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(text(), 'Popularity')] (tried for 10 second(s) with 500 milliseconds interval)
+    Build info: version: '4.21.0', revision: '79ed462ef4'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+    Driver info: org.openqa.selenium.chrome.ChromeDriver
+    Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.49, chrome: {chromedriverVersion: 156.0.8078.73 (2f9a11097447..., userDataDir: C:\Users\SAPTAR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51490}, goog:processID: 20960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51490/devtoo..., se:cdpVersion: 156.0.8078.49, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+    Session ID: 438d0aa1dd94435a31e48b52863cf8e1
+    Exception occured! Expected condition failed: waiting for visibility of all elements located by By.xpath: //span[contains(@id,'productRating')] (tried for 30 second(s) with 500 milliseconds interval)
+    Build info: version: '4.21.0', revision: '79ed462ef4'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+    Driver info: org.openqa.selenium.chrome.ChromeDriver
+    Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.49, chrome: {chromedriverVersion: 156.0.8078.73 (2f9a11097447..., userDataDir: C:\Users\SAPTAR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51490}, goog:processID: 20960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51490/devtoo..., se:cdpVersion: 156.0.8078.49, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+    Session ID: 438d0aa1dd94435a31e48b52863cf8e1
+    Ending Test Case 01
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase01 PASSED
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase02 STANDARD_OUT
+    Beginning Test Case 02
+    Sending keys
+    Products with at least 17% discount: 0
+    Ending Test Case 02
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase02 PASSED
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase03 STANDARD_OUT
+    Beginning Test Case 03
+    Sending keys
+    Clicking
+    Exception Occured! Expected condition failed: waiting for element to be clickable: By.xpath: //div[normalize-space(.)='4? & above'] (tried for 10 second(s) with 500 milliseconds interval)
+    Build info: version: '4.21.0', revision: '79ed462ef4'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+    Driver info: org.openqa.selenium.chrome.ChromeDriver
+    Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.49, chrome: {chromedriverVersion: 156.0.8078.73 (2f9a11097447..., userDataDir: C:\Users\SAPTAR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51490}, goog:processID: 20960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51490/devtoo..., se:cdpVersion: 156.0.8078.49, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+    Session ID: 438d0aa1dd94435a31e48b52863cf8e1
+    Exception Occured! Expected condition failed: waiting for visibility of all elements located by By.xpath: //span[contains(concat(' ', normalize-space(@class), ' '), ' PvbNMB ')] (tried for 30 second(s) with 500 milliseconds interval)
+    Build info: version: '4.21.0', revision: '79ed462ef4'
+    System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+    Driver info: org.openqa.selenium.chrome.ChromeDriver
+    Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.49, chrome: {chromedriverVersion: 156.0.8078.73 (2f9a11097447..., userDataDir: C:\Users\SAPTAR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51490}, goog:processID: 20960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51490/devtoo..., se:cdpVersion: 156.0.8078.49, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+    Session ID: 438d0aa1dd94435a31e48b52863cf8e1
+    Ending Test Case 03
+
+Test Suite for Buildout > Test Cases for Buildout > demo.TestCases.testCase03 PASSED
+
+Test Suite for Buildout > Test Cases for Buildout STANDARD_ERROR
+    Oct 28, 2026 10:05:44 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+    WARNING: Connection reset
+    java.net.SocketException: Connection reset
+    	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+    	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+    	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1170)
+    	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:833)
+    	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+    	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+    	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+    	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+    	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:774)
+    	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:957)
+    	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+    	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:982)
+    	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:937)
+    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:937)
+
+
+TEST RESULT: SUCCESS
+TEST SUMMARY: RAN 3 TESTS, 3 SUCCEEDED, 0 FAILED, 0 SKIPPED
+
+> Task :checkstyleTest
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:22: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:42: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:49: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:52: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:54: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:59: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:64: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:66: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:68: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:73: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:77: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:79: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:84: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\TestCases.java:86: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:26: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:28: USED_WAIT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:34: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:39: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:41: USED_WAIT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:45: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:57: USED_WAIT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:67: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:71: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:95: USED_WAIT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:122: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:135: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:144: USED_COMMENT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:150: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:168: USED_WAIT [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:171: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:209: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:217: USED_SOPL [RegexpSinglelineJava]
+[ant:checkstyle] [ERROR] C:\Users\Saptarshi Roy\Crio_QAINTV Projects\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\saptarshiroy16-ME_QA_XFLIPKART_SEARCH\src\test\java\demo\wrappers\Wrappers.java:223: USED_SOPL [RegexpSinglelineJava]
+Checkstyle rule violations were found. See the report at: file:///C:/Users/Saptarshi%20Roy/Crio_QAINTV%20Projects/saptarshiroy16-ME_QA_XFLIPKART_SEARCH/saptarshiroy16-ME_QA_XFLIPKART_SEARCH/build/reports/checkstyle/test.xml
+Checkstyle files with violations: 2
+Checkstyle violations by severity: [error:33]
+
+
+BUILD SUCCESSFUL in 2m 7s
+10 actionable tasks: 10 executed
